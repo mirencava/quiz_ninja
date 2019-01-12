@@ -1,0 +1,155 @@
+<style>
+    /* .rojo {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border: 2px green solid;
+    }
+    
+    #movido {
+        position: relative;
+        left: 50%;
+    }
+    
+    #movido2 {
+        left: 50%;
+    }
+    
+    #movido3 {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+    
+    #relativo {
+        position: relative;
+    }
+    
+    #movido4 {
+        position: absolute;
+        left: 50px;
+    }
+    
+    #relativo2 {
+        position: relative;
+    }
+    
+    #movido5 {
+        position: fixed;
+        top: 40px;
+        left: 50px;
+    } */
+    /*     
+    .rojo {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border: 2px green solid;
+    }
+    
+    #primerDiv {
+        height: 2000px
+    }
+    
+    #relativo {
+        position: relative;
+    }
+    
+    #movido {
+        position: fixed;
+        top: 40px;
+        left: 50px;
+    } */
+    
+    #marca {
+        height: 50px;
+        width: 100%;
+        background-color: green;
+        text-align: center;
+    }
+    
+    #marca img {
+        height: 100%;
+    }
+    
+    #menu {
+        position: sticky;
+        top: 0;
+        height: 100px;
+        width: 100%;
+        background-color: red;
+    }
+    
+    #contenido {
+        height: 1200px;
+        width: 100%;
+        background-color: yellow;
+    }
+</style>
+
+
+<div id="marca">
+    <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAARpAAAAJDMzZGRhNGMwLTU4YmMtNDdmZi1hMjU5LWIwYTViMjdlNWJmOQ.png">
+</div>
+
+<div id="menu"></div>
+<div id="contenido">CONTENIDO</div>
+
+
+<!-- <div class="rojo"></div>
+<div id="movido" class="rojo"></div>
+<div class="rojo"></div>
+<div class="rojo" id="movido2"></div>
+<div class="rojo" id="movido3"></div>
+
+<div id="relativo" class="rojo">
+    <div id="movido4" class="rojo"></div>
+</div> -->
+
+<!-- <div id="relativo2" class="rojo">
+    <div id="movido5" class="rojo"></div>
+</div> -->
+
+<!-- <div id="primerDiv" class="rojo"></div>
+<div id="relativo" class="rojo">
+    <div id="movido" class="rojo"></div>
+</div> -->
+
+
+
+
+<!-- movido2:  if the position property is equal to static: the element which has the id equal to MOVIDO don't take into account the style property left. The element is printed
+in the place that it is expected to be printed. That is to say, the normal flow of the page.-->
+
+<!-- movido: if the position is  equal to relative. The element is printed in the regular place, related to de normal flow of the page, but now the element is aware of the properties left,top,botton and 
+right. So, we can positinate it, in related to its normal position. -->
+
+<!-- if the position is absolute the element take reference in the window  element or the nearest element, if this element is its parent and not have the property position value = static
+movido3: navigator window example
+movido4: take as reference their parent element-->
+
+<!-- Los elementos a los cuales se les posiciona con position: fixed también están fuera 
+  del flujo normal de la página. Sin embargo, no se debe de confundir con los elementos que están posicionados con position: absolute.
+
+A diferencia de estos últimos, los elementos con position: fixed toman como referencia 
+la ventana del navegador y no respetan el tener un contenedor padre que esté posicionado. Además, al hacer scroll en la página, el elemento que esté posicionado como position: 
+fixed seguirá en la misma posición respecto a la ventana del navegador aunque el scroll haya desplazado la página hacia abajo. -->
+
+
+<!-- position: inherit
+Realmente la propiedad position con el valor inherit actúa de la misma manera que el resto de propiedades que pueden obtener este valor, hereda el valor para esta propiedad del elemento padre.
+
+
+position: initial
+Igual que con el valor anterior, actúa de la misma manera que el resto de propiedades que pueden obtener este valor, en este caso haciendo 
+que la propiedad position tome su valor por defecto, por lo que, usando position: initial, sería lo mismo que indicar position: static. -->
+
+<!-- position: sticky
+Este es un valor que es nuevo relativamente para esta propiedad.
+
+Usando este valor, el elemento actúa como si estuviera posicionado con el valor relative hasta que se alcanza un umbral de desplazamiento 
+(en el propio elemento o en el elemento padre), con el cual el elemento pasa a posicionarse como si estuviera posicionado con el valor fixed.
+
+Por ejemplo, vamos a tomar como referencia un menú horizontal que está en la parte superior de la página debajo del logo de la empresa a la que pertenecemos. -->
+
+<!-- https://es.stackoverflow.com/questions/37930/cual-es-la-diferencia-entre-position-relative-position-absolute-y-position -->git c
