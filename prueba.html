@@ -4,42 +4,58 @@
         width: 100px;
         background-color: red;
         border: 2px green solid;
+        width: 100px;
+        height: 100px;
     }
     
     #movido {
         position: relative;
         left: 50%;
+        width: 200px;
+        height: 150;
     }
     
     #movido2 {
         left: 50%;
+        width: 200px;
+        height: 150;
     }
     
     #movido3 {
         position: absolute;
         top: 40px;
-        left: 50px;
+        left: 200px;
+        width: 200px;
+        height: 150;
     }
     
     #relativo {
         position: relative;
+        width: 200px;
+        height: 150;
     }
     
     #movido4 {
         position: absolute;
         left: 50px;
+        width: 200px;
+        height: 150;
     }
     
     #relativo2 {
         position: relative;
+        width: 200px;
+        height: 150;
     }
     
     #movido5 {
         position: fixed;
         top: 40px;
-        left: 50px;
+        left: 250px;
+        width: 200px;
+        height: 150;
     } */
-    /*     
+    
     .rojo {
         height: 100px;
         width: 100px;
@@ -53,14 +69,15 @@
     
     #relativo {
         position: relative;
+        background-color: greenyellow;
     }
     
     #movido {
         position: fixed;
         top: 40px;
-        left: 50px;
-    } */
-    
+        left: 300px;
+    }
+    /* 
     #marca {
         height: 50px;
         width: 100%;
@@ -68,7 +85,7 @@
         text-align: center;
     }
     
-    #marca img {
+     #marca img {
         height: 100%;
     }
     
@@ -84,36 +101,65 @@
         height: 1200px;
         width: 100%;
         background-color: yellow;
-    }
+    } */
 </style>
 
-
+<!-- 
 <div id="marca">
     <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAARpAAAAJDMzZGRhNGMwLTU4YmMtNDdmZi1hMjU5LWIwYTViMjdlNWJmOQ.png">
 </div>
 
 <div id="menu"></div>
-<div id="contenido">CONTENIDO</div>
+<div id="contenido">CONTENIDO</div> -->
+<!-- 
+<div class="rojo">
+    <p>Cuadrado inicial</p>
+</div>
+
+<div id="movido" class="rojo">
+    <p>cuadrado movido position relative</p>
+</div>
+
+<div class="rojo">
+    <p>otro cuadrado con sola la clase rojo</p>
+</div>
+
+<div class="rojo" id="movido2">
+    <p>movido2 que tiene la clase static (cuando no se indica nada eres static) no tienen en cuanta left</p>
+</div>
+
+<div class="rojo" id="movido3">
+    <p>movido3 tiene position absolute no tiene en cuenta el flujo normal de de la página...se printa en referencia al window</p>
+</div>
 
 
-<!-- <div class="rojo"></div>
-<div id="movido" class="rojo"></div>
-<div class="rojo"></div>
-<div class="rojo" id="movido2"></div>
-<div class="rojo" id="movido3"></div>
+<hr>
+<hr>
+<p>mas ejemplos</p>
 
 <div id="relativo" class="rojo">
-    <div id="movido4" class="rojo"></div>
+    <p>tengo posicion relative</p>
+    <div id="movido4" class="rojo">
+        <p>tengo posicion absolute y tomo como referencia a mi elemento padre</p>
+    </div>
+</div>
+
+<div id="relativo2" class="rojo">
+    <p>tengo posicion relative</p>
+    <div id="movido5" class="rojo">
+        <p>tengo posicion fixed y estoy fuera del flujo normal de la página y no respeto el tener un contenedor padre que esté posicionado</p>
+    </div>
 </div> -->
 
-<!-- <div id="relativo2" class="rojo">
-    <div id="movido5" class="rojo"></div>
-</div> -->
-
-<!-- <div id="primerDiv" class="rojo"></div>
-<div id="relativo" class="rojo">
-    <div id="movido" class="rojo"></div>
-</div> -->
+<div id="primerDiv" class="rojo">
+    <p>no tengo posicion, pero por defecto soy static</p>
+</div>
+<div id="relativo">
+    <p>contengo un hijo</p>
+    <div id="movido" class="rojo">
+        <p>tengo posicion fixed y no respeto tener un contenedor me posicione según la ventana del navegador</p>
+    </div>
+</div>
 
 
 
@@ -125,7 +171,7 @@ in the place that it is expected to be printed. That is to say, the normal flow 
 right. So, we can positinate it, in related to its normal position. -->
 
 <!-- if the position is absolute the element take reference in the window  element or the nearest element, if this element is its parent and not have the property position value = static
-movido3: navigator window example
+movido3: take as reference the navigator window example
 movido4: take as reference their parent element-->
 
 <!-- Los elementos a los cuales se les posiciona con position: fixed también están fuera 
@@ -152,4 +198,4 @@ Usando este valor, el elemento actúa como si estuviera posicionado con el valor
 
 Por ejemplo, vamos a tomar como referencia un menú horizontal que está en la parte superior de la página debajo del logo de la empresa a la que pertenecemos. -->
 
-<!-- https://es.stackoverflow.com/questions/37930/cual-es-la-diferencia-entre-position-relative-position-absolute-y-position -->git c
+<!-- https://es.stackoverflow.com/questions/37930/cual-es-la-diferencia-entre-position-relative-position-absolute-y-position -->
