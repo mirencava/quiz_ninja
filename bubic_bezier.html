@@ -1,0 +1,43 @@
+<!-- The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: 
+    p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points
+     which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values
+      for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form:
+     (x1, y1, x2, y2). Pulling it all together, here's an example of a Bezier curve in CSS code: -->
+<!-- A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state,
+     P3 is (1, 1) and represents the final time and the final state. -->
+<!-- cubic-bezier(x1,y1,x2,y2) Required. Numeric values. x1 and x2 must be a number from 0 to 1 speed curve-->
+<style>
+    .balls {
+        border-radius: 50%;
+        background: linear-gradient( 35deg, #ccffff, #ffcccc);
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    #ball1 {
+        left: 27%;
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    
+    #ball2 {
+        left: 56%;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+        100% {
+            top: 249px;
+        }
+    }
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
